@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navicom — Soluciones Tecnológicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="page-inicio">
+ 
+  <!-- ══ COOKIE BANNER ═══════════════════════ -->
+  <div class="cookie-overlay" id="cookie-overlay">
+    <div class="cookie-banner">
+      <div class="cookie-banner-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="cookie-banner-text">
+        <h3>Usamos cookies</h3>
+        <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia. Puedes aceptarlas o rechazar las no esenciales. <a href="./cookies.html">Más información</a>.</p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="cookie-btn-accept" id="cookie-accept">Aceptar todas</button>
+        <button class="cookie-btn-reject" id="cookie-reject">Solo esenciales</button>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ══ NAVBAR ══════════════════════════════ -->
+  <header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="./Incio.html" class="nav-brand">
+      <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+        <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+        <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+              font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+      </svg>
+      <span>NAVICOM</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="./Incio.html" class="nav-item active">Inicio</a>
+      <a href="./Productos.html" class="nav-item">Productos</a>
+      <a href="./Servicios.html" class="nav-item">Servicios</a>
+      <a href="./cesta.html" class="cart-wrapper" id="cart-trigger">
+        <div class="cart-icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-counter" id="cart-count">0</span>
+        </div>
+      </a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="./Contacto.html" class="nav-ghost">Contacto</a>
+      <a href="./iniciarSesion.html" class="nav-ghost nav-account" id="nav-account-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        Iniciar sesión
+      </a>
+      <a href="./Productos.html" class="nav-primary">Comprar ahora →</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+ 
+  <!-- ══ HERO (fondo blanco, estilo Productos) ══ -->
+  <section class="inicio-hero-white">
+    <div class="inicio-hero-white-bg"></div>
+    <div class="inicio-hero-white-content">
+      <div class="inicio-hero-left">
+        <div class="inicio-eyebrow-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Coín, Málaga · Desde 2010
+        </div>
+        <h1 class="inicio-hero-white-title">
+          Informática<br>para <em>empresas</em><br>y particulares
+        </h1>
+        <p class="inicio-hero-white-sub">
+          Mantenimiento, reparación, redes e instalaciones.<br>
+          Navicom lleva más de 14 años cuidando la tecnología de nuestros clientes en Málaga y alrededores.
+        </p>
+        <div class="inicio-hero-white-actions">
+          <a href="Productos.html" class="btn-hero-primary">
+            Ver catálogo
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="Contacto.html" class="btn-hero-outline">Hablar con un técnico</a>
+        </div>
+      </div>
+      <div class="inicio-hero-stats-white">
+        <div class="inicio-hstat">
+          <div class="inicio-hstat-num">14<span>+</span></div>
+          <p>Años de experiencia</p>
+        </div>
+        <div class="inicio-hstat-div"></div>
+        <div class="inicio-hstat">
+          <div class="inicio-hstat-num">500<span>+</span></div>
+          <p>Clientes satisfechos</p>
+        </div>
+        <div class="inicio-hstat-div"></div>
+        <div class="inicio-hstat">
+          <div class="inicio-hstat-num">24<span>/7</span></div>
+          <p>Soporte técnico</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ══ BRANDS ═══════════════════════════════ -->
+  <section class="brands-strip">
+    <p class="brands-label">Productos originales de las mejores marcas</p>
+    <div class="brands-track">
+      <div class="brands-inner">
+        <span>INTEL</span><span>AMD</span><span>NVIDIA</span><span>CISCO</span>
+        <span>DELL</span><span>HP</span><span>LENOVO</span><span>SYNOLOGY</span>
+        <span>MICROSOFT</span><span>VMWARE</span><span>FORTINET</span><span>UBIQUITI</span>
+        <span>INTEL</span><span>AMD</span><span>NVIDIA</span><span>CISCO</span>
+        <span>DELL</span><span>HP</span><span>LENOVO</span><span>SYNOLOGY</span>
+        <span>MICROSOFT</span><span>VMWARE</span><span>FORTINET</span><span>UBIQUITI</span>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ══ QUIÉNES SOMOS ════════════════════════ -->
+  <section class="about-section">
+    <div class="about-inner">
+      <div class="about-text">
+        <p class="section-eyebrow">Quiénes somos</p>
+        <h2 class="section-heading">Más de 14 años<br>resolviendo <em>problemas</em></h2>
+        <p class="about-body">
+          Navicom Informática es una empresa malagueña especializada en mantenimiento preventivo, correctivo y reparación de equipos informáticos. Nacimos para brindar soporte técnico de calidad a empresas y particulares, con la privacidad e integridad de los datos como prioridad absoluta.
+        </p>
+        <p class="about-body">
+          Estamos en <strong>Calle Buenavista 53, Coín (Málaga)</strong> y atendemos a clientes de toda la provincia. Ya sea una reparación urgente, una instalación de red o modernizar el sistema de tu negocio, tenemos la solución.
+        </p>
+        <div class="about-values">
+          <div class="about-val">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Clientes satisfechos ante todo
+          </div>
+          <div class="about-val">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Privacidad y seguridad total
+          </div>
+          <div class="about-val">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Respuesta rápida y eficaz
+          </div>
+          <div class="about-val">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Actitud emprendedora y responsable
+          </div>
+        </div>
+        <a href="Contacto.html" class="btn-hero-primary" style="margin-top:28px; display:inline-flex;">
+          Contáctanos
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="about-cards">
+        <div class="about-card ac-mission">
+          <div class="ac-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Misión</h3>
+          <p>Satisfacer las necesidades de nuestros clientes con un servicio excelente, cumplimiento rápido y de confianza.</p>
+        </div>
+        <div class="about-card ac-vision">
+          <div class="ac-icon ac-icon-blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Visión</h3>
+          <p>Convertirnos en una de las mejores empresas de mantenimiento informático, con los más altos índices de calidad y servicio al cliente.</p>
+        </div>
+        <div class="about-card ac-location">
+          <div class="ac-icon ac-icon-dark">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Dónde estamos</h3>
+          <p>Calle Buenavista 53, Coín, Málaga. Atendemos también de forma remota a toda España.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ══ SERVICIOS GRID ═══════════════════════ -->
+  <section class="services-light-section">
+    <div class="services-light-inner">
+      <div class="services-light-head">
+        <p class="section-eyebrow">Nuestros servicios</p>
+        <h2 class="section-heading">Todo lo que tu empresa<br>necesita en un <em>lugar</em></h2>
+      </div>
+      <div class="services-light-grid">
+ 
+        <div class="sl-card reveal-up" style="--d:.05s">
+          <div class="sl-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Reparación de equipos</h3>
+          <p>Ordenadores de sobremesa, portátiles, todo en uno y tablets. Les damos una nueva vida con diagnóstico profesional.</p>
+        </div>
+ 
+        <div class="sl-card reveal-up" style="--d:.12s">
+          <div class="sl-card-icon sl-icon-green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Redes locales y cobertura</h3>
+          <p>Diseñamos e instalamos la red ideal para tu hogar o empresa. Eliminamos puntos muertos y ampliamos cobertura 4G/5G.</p>
+        </div>
+ 
+        <div class="sl-card reveal-up" style="--d:.19s">
+          <div class="sl-card-icon sl-icon-orange">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Equipos de seguridad</h3>
+          <p>Cámaras de vigilancia, sensores de movimiento y sistemas de monitoreo para casas y negocios.</p>
+        </div>
+ 
+        <div class="sl-card reveal-up" style="--d:.26s">
+          <div class="sl-card-icon sl-icon-purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="8" width="22" height="8" rx="2"/><path d="M12 8V4M12 16v4"/></svg>
+          </div>
+          <h3>TPV e instalaciones</h3>
+          <p>Modernizamos tu negocio con terminales de punto de venta para bares, tiendas y comercios.</p>
+        </div>
+ 
+        <div class="sl-card reveal-up" style="--d:.05s">
+          <div class="sl-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Software de gestión</h3>
+          <p>Facturación, contabilidad y programas de gestión empresarial. Te acompañamos hasta que lo domines.</p>
+        </div>
+ 
+        <div class="sl-card reveal-up" style="--d:.12s">
+          <div class="sl-card-icon sl-icon-green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Asistencia remota</h3>
+          <p>Soporte técnico a distancia para cualquier cliente. Resolvemos incidencias sin que tengas que moverte.</p>
+        </div>
+ 
+      </div>
+      <div class="services-light-cta">
+        <a href="Servicios.html" class="btn-hero-primary">
+          Ver todos los servicios
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ══ PROCESO ══════════════════════════════ -->
+  <section class="process-light">
+    <div class="process-light-inner">
+      <div class="process-light-head">
+        <p class="section-eyebrow">Cómo trabajamos</p>
+        <h2 class="section-heading">Un proceso <em>sin fricciones</em></h2>
+      </div>
+      <div class="process-light-steps">
+        <div class="plstep reveal-up" style="--d:.0s">
+          <div class="plstep-n">1</div>
+          <div class="plstep-line"></div>
+          <h3>Consulta inicial</h3>
+          <p>Analizamos tus necesidades sin compromiso ni coste.</p>
+        </div>
+        <div class="plstep reveal-up" style="--d:.1s">
+          <div class="plstep-n">2</div>
+          <div class="plstep-line"></div>
+          <h3>Propuesta a medida</h3>
+          <p>Diseñamos la solución óptima para tu caso.</p>
+        </div>
+        <div class="plstep reveal-up" style="--d:.2s">
+          <div class="plstep-n">3</div>
+          <div class="plstep-line"></div>
+          <h3>Implementación</h3>
+          <p>Desplegamos todo sin interrumpir tu actividad.</p>
+        </div>
+        <div class="plstep reveal-up" style="--d:.3s">
+          <div class="plstep-n">4</div>
+          <div class="plstep-line"></div>
+          <h3>Soporte continuo</h3>
+          <p>Monitorización proactiva y técnico disponible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ══ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="Inicio.html" class="nav-brand">
+            <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+              <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+              <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+                    font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+            </svg>
+            <span>NAVICOM</span>
+          </a>
+          <p>C/ Buenavista 53, Coín, Málaga.<br>Soluciones tecnológicas de confianza.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Carreras</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Productos</h4>
+            <a href="Productos.html">Hardware</a>
+            <a href="Productos.html">Software</a>
+            <a href="Productos.html">Servidores y NAS</a>
+          </div>
+          <div class="footer-col">
+            <h4>Soporte</h4>
+            <a href="Contacto.html">Contacto</a>
+            <a href="#">Soporte 24/7</a>
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Navicom-Informatica-1407475992894178/" target="_blank" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://instagram.com/navicom" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/navicom" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <p class="copyright">&copy; 2026 Navicom. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+ 
+  <script type="module" src="./js.js"></script>
+ 
+</body>
+</html>
+ 

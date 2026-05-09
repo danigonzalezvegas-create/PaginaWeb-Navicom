@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navicom — Cuenta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="./Incio.html" class="nav-brand">
+        <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+          <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+          <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+                font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+        </svg>
+        <span>NAVICOM</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="./Incio.html" class="nav-item">Inicio</a>
+        <a href="./Productos.html" class="nav-item">Productos</a>
+        <a href="./Servicios.html" class="nav-item">Servicios</a>
+        <a href="./cesta.html" class="cart-wrapper" id="cart-trigger">
+          <div class="cart-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span class="cart-counter" id="cart-count">0</span>
+          </div>
+        </a>
+      </nav>
+      <div class="nav-actions">
+        <a href="./iniciarSesion.html" class="nav-ghost nav-account active">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          Iniciar sesión
+        </a>
+        <a href="./Contacto.html" class="nav-ghost">Contacto</a>
+        <a href="./Productos.html" class="nav-primary">Comprar ahora →</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══ MAIN ══════════════════════════════ -->
+  <main class="cuenta-page">
+  <div class="cuenta-center">
+
+    <!-- Título estilo "Tu Cesta" -->
+    <div class="cuenta-header" style="margin-bottom: 32px; width: 100%;">
+      <h1 class="form-panel-title" style="font-size: 34px; margin-bottom: 8px;">
+        Mi Cuenta
+      </h1>
+      <p class="form-panel-sub" style="margin-bottom: 0; font-size: 15.5px;">
+        Accede a tu cuenta o crea una nueva para disfrutar de todos los beneficios
+      </p>
+    </div>
+
+    <div class="cuenta-form-wrap">
+
+        <!-- Tabs -->
+        <div class="cuenta-tabs">
+          <button class="cuenta-tab active" id="tab-login" onclick="switchTab('login')">Iniciar sesión</button>
+          <button class="cuenta-tab" id="tab-register" onclick="switchTab('register')">Registrarse</button>
+        </div>
+
+        <!-- ── PANEL LOGIN ── -->
+        <div class="form-panel active" id="panel-login">
+          <h2 class="form-panel-title">Bienvenido de nuevo</h2>
+          <p class="form-panel-sub">Introduce tus datos para acceder a tu cuenta.</p>
+
+          <div class="cf-group">
+            <label for="login-email">Correo electrónico</label>
+            <div class="cf-input-wrap">
+              <span class="cf-input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              </span>
+              <input class="cf-input" type="email" id="login-email" placeholder="tu@email.com" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="cf-group">
+            <label for="login-pass">Contraseña</label>
+            <div class="cf-input-wrap">
+              <span class="cf-input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <input class="cf-input" type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password">
+            </div>
+          </div>
+
+          <div class="cf-forgot"><a href="#">¿Olvidaste tu contraseña?</a></div>
+
+          <button class="cf-submit" onclick="handleLogin()">
+            Entrar a mi cuenta
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+
+          <div class="cf-divider">
+            <div class="cf-divider-line"></div>
+            <span>o continúa con</span>
+            <div class="cf-divider-line"></div>
+          </div>
+
+          <div class="cf-oauth">
+            <button class="cf-oauth-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google
+            </button>
+          </div>
+
+          <p class="cf-switch">
+            ¿No tienes cuenta?
+            <button onclick="switchTab('register')">Regístrate gratis</button>
+          </p>
+        </div>
+
+        <!-- ── PANEL REGISTRO ── -->
+        <div class="form-panel" id="panel-register">
+          <h2 class="form-panel-title">Crear cuenta</h2>
+          <p class="form-panel-sub">Únete a Navicom y accede a todos los beneficios.</p>
+
+          <div class="cf-row">
+            <div class="cf-group">
+              <label for="reg-nombre">Nombre</label>
+              <div class="cf-input-wrap">
+                <span class="cf-input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                </span>
+                <input class="cf-input" type="text" id="reg-nombre" placeholder="Juan" autocomplete="given-name">
+              </div>
+            </div>
+            <div class="cf-group">
+              <label for="reg-apellido">Apellido</label>
+              <div class="cf-input-wrap">
+                <span class="cf-input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                </span>
+                <input class="cf-input" type="text" id="reg-apellido" placeholder="García" autocomplete="family-name">
+              </div>
+            </div>
+          </div>
+
+          <div class="cf-group">
+            <label for="reg-email">Correo electrónico</label>
+            <div class="cf-input-wrap">
+              <span class="cf-input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              </span>
+              <input class="cf-input" type="email" id="reg-email" placeholder="tu@email.com" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="cf-group">
+            <label for="reg-tel">Teléfono <span style="color:var(--gray-400);font-weight:400">(opcional)</span></label>
+            <div class="cf-input-wrap">
+              <span class="cf-input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+              </span>
+              <input class="cf-input" type="tel" id="reg-tel" placeholder="+34 600 000 000" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="cf-group">
+            <label for="reg-pass">Contraseña</label>
+            <div class="cf-input-wrap">
+              <span class="cf-input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <input class="cf-input" type="password" id="reg-pass" placeholder="Mínimo 8 caracteres" autocomplete="new-password">
+            </div>
+          </div>
+
+          <div class="cf-check">
+            <input type="checkbox" id="reg-terms">
+            <label for="reg-terms">
+              Acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a> de Navicom.
+            </label>
+          </div>
+
+          <button class="cf-submit" onclick="handleRegister()">
+            Crear cuenta gratis
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+
+          <div class="cf-divider">
+            <div class="cf-divider-line"></div>
+            <span>o regístrate con</span>
+            <div class="cf-divider-line"></div>
+          </div>
+
+          <div class="cf-oauth">
+            <button class="cf-oauth-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google
+            </button>
+          </div>
+
+          <p class="cf-switch">
+            ¿Ya tienes cuenta?
+            <button onclick="switchTab('login')">Inicia sesión</button>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./js.js"></script>
+
+</body>
+</html>

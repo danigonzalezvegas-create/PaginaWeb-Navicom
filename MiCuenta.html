@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Cuenta — Navicom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./MiCuenta.css">
+</head>
+<body class="page-micuenta">
+
+  <!-- ══ NAVBAR ══════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="./Incio.html" class="nav-brand">
+        <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+          <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+          <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+                font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+        </svg>
+        <span>NAVICOM</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="./Incio.html" class="nav-item">Inicio</a>
+        <a href="./Productos.html" class="nav-item">Productos</a>
+        <a href="./Servicios.html" class="nav-item">Servicios</a>
+        <a href="./cesta.html" class="cart-wrapper" id="cart-trigger">
+          <div class="cart-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span class="cart-counter" id="cart-count">0</span>
+          </div>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="./Contacto.html" class="nav-ghost">Contacto</a>
+        <a href="./MiCuenta.html" class="nav-ghost nav-account active-account" id="nav-account-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span id="nav-user-label">Mi cuenta</span>
+        </a>
+        <a href="./cesta.html" class="nav-primary">Ver cesta →</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══ HERO DE CUENTA ══════════════════════ -->
+  <section class="mc-hero">
+    <div class="mc-hero-inner">
+  <div class="mc-hero-info">
+
+    
+
+    <p class="mc-hero-label">Panel de usuario</p>
+    <h1 class="mc-hero-name" id="mc-hero-name">Bienvenido</h1>
+  </div>
+</div>
+  </section>
+
+  <!-- ══ LAYOUT PRINCIPAL ════════════════════ -->
+  <div class="mc-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="mc-sidebar">
+      <nav class="mc-sidenav">
+
+        <p class="mc-sidenav-label">Mi cuenta</p>
+
+        <button class="mc-navbtn active" data-panel="perfil">
+          <span class="mc-navbtn-icon mc-icon-blue">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </span>
+          Datos personales
+          <svg class="mc-navbtn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <button class="mc-navbtn" data-panel="pedidos">
+          <span class="mc-navbtn-icon mc-icon-green">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </span>
+          Mis pedidos
+          <span class="mc-navbtn-badge" id="badge-pedidos">0</span>
+          <svg class="mc-navbtn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <button class="mc-navbtn" data-panel="direccion">
+          <span class="mc-navbtn-icon mc-icon-orange">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          Mis direcciones
+          <svg class="mc-navbtn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <button class="mc-navbtn" data-panel="config">
+          <span class="mc-navbtn-icon mc-icon-purple">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </span>
+          Configuración
+          <svg class="mc-navbtn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="mc-sidenav-divider"></div>
+        <p class="mc-sidenav-label">Sesión</p>
+
+        <button class="mc-navbtn" data-panel="cambiar">
+          <span class="mc-navbtn-icon mc-icon-gray">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          Cambiar de cuenta
+          <svg class="mc-navbtn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <button class="mc-navbtn mc-navbtn-danger" id="btn-logout">
+          <span class="mc-navbtn-icon mc-icon-red">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          </span>
+          Cerrar sesión
+        </button>
+
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="mc-content">
+
+      <!-- ── PANEL: DATOS PERSONALES ── -->
+      <section class="mc-panel active" id="panel-perfil">
+        <div class="mc-panel-header">
+          <h2 class="mc-panel-title">Datos personales</h2>
+          <p class="mc-panel-sub">Actualiza tu nombre, email y contraseña</p>
+        </div>
+        <div class="mc-card">
+          <div class="mc-form-row">
+            <div class="mc-field">
+              <label>Nombre</label>
+              <input type="text" id="perfil-nombre" placeholder="Tu nombre">
+            </div>
+            <div class="mc-field">
+              <label>Apellidos</label>
+              <input type="text" id="perfil-apellido" placeholder="Tus apellidos">
+            </div>
+          </div>
+          <div class="mc-field">
+            <label>Correo electrónico</label>
+            <input type="email" id="perfil-email" placeholder="tu@email.com">
+          </div>
+          <div class="mc-field">
+            <label>Teléfono</label>
+            <input type="tel" id="perfil-telefono" placeholder="+34 600 000 000">
+          </div>
+          <div class="mc-field">
+            <label>Empresa (opcional)</label>
+            <input type="text" id="perfil-empresa" placeholder="Nombre de tu empresa">
+          </div>
+          <div class="mc-card-footer">
+            <button class="mc-btn-primary" onclick="guardarPerfil()">Guardar cambios</button>
+          </div>
+        </div>
+
+        <div class="mc-panel-header" style="margin-top:32px;">
+          <h2 class="mc-panel-title">Cambiar contraseña</h2>
+          <p class="mc-panel-sub">Introduce tu nueva contraseña</p>
+        </div>
+        <div class="mc-card">
+          <div class="mc-field">
+            <label>Contraseña actual</label>
+            <input type="password" id="pass-actual" placeholder="••••••••">
+          </div>
+          <div class="mc-form-row">
+            <div class="mc-field">
+              <label>Nueva contraseña</label>
+              <input type="password" id="pass-nueva" placeholder="••••••••">
+            </div>
+            <div class="mc-field">
+              <label>Confirmar contraseña</label>
+              <input type="password" id="pass-confirm" placeholder="••••••••">
+            </div>
+          </div>
+          <div class="mc-card-footer">
+            <button class="mc-btn-primary" onclick="cambiarPassword()">Actualizar contraseña</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PANEL: MIS PEDIDOS ── -->
+      <section class="mc-panel" id="panel-pedidos">
+        <div class="mc-panel-header">
+          <h2 class="mc-panel-title">Mis pedidos</h2>
+          <p class="mc-panel-sub">Historial completo de tus compras en Navicom</p>
+        </div>
+        <div id="pedidos-container">
+          <!-- Renderizado por JS -->
+        </div>
+      </section>
+
+      <!-- ── PANEL: DIRECCIONES ── -->
+      <section class="mc-panel" id="panel-direccion">
+        <div class="mc-panel-header">
+          <h2 class="mc-panel-title">Mis direcciones</h2>
+          <p class="mc-panel-sub">Gestiona tus direcciones de envío</p>
+        </div>
+
+        <div id="direcciones-lista"></div>
+
+        <div class="mc-panel-header" style="margin-top:28px;">
+          <h2 class="mc-panel-title">Añadir dirección</h2>
+        </div>
+        <div class="mc-card">
+          <div class="mc-form-row">
+            <div class="mc-field">
+              <label>Nombre de referencia</label>
+              <input type="text" id="dir-nombre" placeholder="Ej: Casa, Oficina…">
+            </div>
+            <div class="mc-field">
+              <label>País</label>
+              <input type="text" id="dir-pais" placeholder="España">
+            </div>
+          </div>
+          <div class="mc-field">
+            <label>Dirección completa</label>
+            <input type="text" id="dir-calle" placeholder="Calle, número, piso…">
+          </div>
+          <div class="mc-form-row">
+            <div class="mc-field">
+              <label>Ciudad</label>
+              <input type="text" id="dir-ciudad" placeholder="Madrid">
+            </div>
+            <div class="mc-field">
+              <label>Código postal</label>
+              <input type="text" id="dir-cp" placeholder="28001">
+            </div>
+          </div>
+          <div class="mc-card-footer">
+            <button class="mc-btn-primary" onclick="guardarDireccion()">Añadir dirección</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PANEL: CONFIGURACIÓN ── -->
+      <section class="mc-panel" id="panel-config">
+        <div class="mc-panel-header">
+          <h2 class="mc-panel-title">Configuración</h2>
+          <p class="mc-panel-sub">Preferencias de tu cuenta y notificaciones</p>
+        </div>
+        <div class="mc-card">
+          <h3 class="mc-card-section-title">Notificaciones por email</h3>
+          <div class="mc-toggle-row">
+            <div>
+              <p class="mc-toggle-label">Confirmación de pedidos</p>
+              <p class="mc-toggle-sub">Recibe un email cuando realices una compra</p>
+            </div>
+            <label class="mc-toggle">
+              <input type="checkbox" id="notif-pedidos" checked>
+              <span class="mc-toggle-slider"></span>
+            </label>
+          </div>
+          <div class="mc-toggle-row">
+            <div>
+              <p class="mc-toggle-label">Ofertas y promociones</p>
+              <p class="mc-toggle-sub">Newsletter con descuentos exclusivos</p>
+            </div>
+            <label class="mc-toggle">
+              <input type="checkbox" id="notif-ofertas">
+              <span class="mc-toggle-slider"></span>
+            </label>
+          </div>
+          <div class="mc-toggle-row">
+            <div>
+              <p class="mc-toggle-label">Novedades de productos</p>
+              <p class="mc-toggle-sub">Alertas de nuevos productos en catálogo</p>
+            </div>
+            <label class="mc-toggle">
+              <input type="checkbox" id="notif-novedades" checked>
+              <span class="mc-toggle-slider"></span>
+            </label>
+          </div>
+          <div class="mc-card-footer">
+            <button class="mc-btn-primary" onclick="guardarConfig()">Guardar preferencias</button>
+          </div>
+        </div>
+
+        <div class="mc-panel-header" style="margin-top:32px;">
+          <h2 class="mc-panel-title">Zona de peligro</h2>
+          <p class="mc-panel-sub">Acciones irreversibles sobre tu cuenta</p>
+        </div>
+        <div class="mc-card mc-card-danger">
+          <p class="mc-danger-text">Eliminar tu cuenta borrará todos tus datos, pedidos y direcciones de forma permanente.</p>
+          <button class="mc-btn-danger" onclick="eliminarCuenta()">Eliminar mi cuenta</button>
+        </div>
+      </section>
+
+      <!-- ── PANEL: CAMBIAR CUENTA ── -->
+      <section class="mc-panel" id="panel-cambiar">
+        <div class="mc-panel-header">
+          <h2 class="mc-panel-title">Cambiar de cuenta</h2>
+          <p class="mc-panel-sub">Cierra sesión e inicia con otra cuenta</p>
+        </div>
+        <div class="mc-card mc-card-center">
+          <div class="mc-cambiar-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>¿Quieres entrar con otra cuenta?</h3>
+          <p>Se cerrará tu sesión actual y podrás iniciar sesión con una cuenta diferente.</p>
+          <div class="mc-cambiar-btns">
+            <button class="mc-btn-primary" onclick="cambiarCuenta()">Cerrar sesión e iniciar otra</button>
+            <button class="mc-btn-outline" onclick="showPanel('perfil')">Cancelar</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ══ FOOTER (igual que Productos.html) ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="Incio.html" class="nav-brand">
+            <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+              <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+              <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+                    font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+            </svg>
+            <span>NAVICOM</span>
+          </a>
+          <p>Soluciones tecnológicas de confianza para tu empresa.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Carreras</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Productos</h4>
+            <a href="Productos.html">Hardware</a>
+            <a href="Productos.html">Software</a>
+            <a href="Productos.html">Servidores y NAS</a>
+          </div>
+          <div class="footer-col">
+            <h4>Soporte</h4>
+            <a href="Contacto.html">Contacto</a>
+            <a href="#">Soporte 24/7</a>
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="https://instagram.com/navicom" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://facebook.com/navicom" target="_blank" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/navicom" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://x.com/navicom" target="_blank" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><path d="M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>
+          </a>
+        </div>
+        <p class="copyright">&copy; 2026 Navicom. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <div class="toast-dot"></div>
+    <span id="toast-msg">Cambios guardados</span>
+  </div>
+
+  <script src="./MiCuenta.js"></script>
+
+</body>
+</html>

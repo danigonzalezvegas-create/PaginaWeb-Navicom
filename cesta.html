@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Cesta — Navicom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- ── COOKIE BANNER ── -->
+  <div class="cookie-overlay" id="cookie-overlay">
+    <div class="cookie-banner">
+      <div class="cookie-banner-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+      </div>
+      <div class="cookie-banner-text">
+        <h3>Usamos cookies</h3>
+        <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia. <a href="#">Política de cookies</a>.</p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="cookie-btn-accept" id="cookie-accept">Aceptar todas</button>
+        <button class="cookie-btn-reject" id="cookie-reject">Solo esenciales</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="./Incio.html" class="nav-brand">
+      <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+        <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+        <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+              font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+      </svg>
+      <span>NAVICOM</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="./Incio.html" class="nav-item active">Inicio</a>
+      <a href="./Productos.html" class="nav-item">Productos</a>
+      <a href="./Servicios.html" class="nav-item">Servicios</a>
+      <a href="./cesta.html" class="cart-wrapper" id="cart-trigger">
+        <div class="cart-icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-counter" id="cart-count">0</span>
+        </div>
+      </a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="./Contacto.html" class="nav-ghost">Contacto</a>
+      <a href="./iniciarSesion.html" class="nav-ghost nav-account">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        Iniciar sesión
+      </a>
+      <a href="Productos.html" class="nav-primary">Comprar ahora →</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+  <main class="page-content cesta-page">
+
+    <!-- Hero de la cesta -->
+    <div class="cesta-hero">
+      <div class="cesta-hero-inner">
+        <span class="section-eyebrow">Mi compra</span>
+        <h1 class="cesta-title">Tu <em>Cesta</em></h1>
+        <p class="cesta-subtitle">Revisa tus productos antes de finalizar el pedido.</p>
+      </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="cesta-main">
+      <div class="cesta-layout">
+
+        <!-- Lista de productos -->
+        <div class="cesta-items-col">
+          <div class="cesta-items-header">
+            <span>Producto</span>
+            <span>Cantidad</span>
+            <span>Precio</span>
+          </div>
+          <div id="cart-items-container">
+            <!-- Renderizado por JS -->
+          </div>
+        </div>
+
+        <!-- Resumen -->
+        <aside class="cesta-summary-col">
+          <div class="cesta-summary-box">
+            <h3 class="cesta-summary-title">Resumen del pedido</h3>
+
+            <div class="cesta-summary-rows">
+              <div class="cesta-srow">
+                <span>Subtotal</span>
+                <span id="summary-subtotal">0,00 €</span>
+              </div>
+              <div class="cesta-srow">
+                <span>Envío</span>
+                <span class="cesta-free">Gratis</span>
+              </div>
+              <div class="cesta-srow">
+                <span>IVA (21%)</span>
+                <span id="summary-iva">0,00 €</span>
+              </div>
+            </div>
+
+            <div class="cesta-summary-total">
+              <span>Total</span>
+              <span id="summary-total">0,00 €</span>
+            </div>
+
+            <a href="Pagar.html" class="cesta-checkout-btn">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Pagar ahora
+            </a>
+
+            <div class="cesta-secure">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Pago 100% seguro y encriptado
+            </div>
+
+            <div class="cesta-summary-divider"></div>
+
+            <a href="Productos.html" class="cesta-continue-link">
+              ← Seguir comprando
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="Incio.html" class="nav-brand">
+            <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+              <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+              <text x="40" y="47" text-anchor="middle" dominant-baseline="middle" font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+            </svg>
+            <span>NAVICOM</span>
+          </a>
+          <p>C/ Buenavista 53, Coín, Málaga.<br>Soluciones tecnológicas de confianza.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Carreras</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Productos</h4>
+            <a href="Productos.html">Hardware</a>
+            <a href="Productos.html">Software</a>
+            <a href="Productos.html">Servidores y NAS</a>
+          </div>
+          <div class="footer-col">
+            <h4>Soporte</h4>
+            <a href="Contacto.html">Contacto</a>
+            <a href="#">Soporte 24/7</a>
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Navicom-Informatica-1407475992894178/" target="_blank" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://instagram.com/navicom" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/navicom" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <p class="copyright">&copy; 2026 Navicom. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./js.js"></script>
+</body>
+</html>

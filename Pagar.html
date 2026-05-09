@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Pedido | NAVICOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="checkout-page">
+
+  <!-- ══ NAVBAR ══════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="./Incio.html" class="nav-brand">
+        <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+          <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+          <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+                font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+        </svg>
+        <span>NAVICOM</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="./Incio.html" class="nav-item">Inicio</a>
+        <a href="./Productos.html" class="nav-item">Productos</a>
+        <a href="./Servicios.html" class="nav-item">Servicios</a>
+        <a href="./cesta.html" class="cart-wrapper" id="cart-trigger">
+          <div class="cart-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span class="cart-counter" id="cart-count">0</span>
+          </div>
+        </a>
+      </nav>
+      <div class="nav-actions">
+        <a href="./Contacto.html" class="nav-ghost">Contacto</a>
+        <a href="./iniciarSesion.html" class="nav-ghost nav-account" id="nav-account-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          Iniciar sesión
+        </a>
+        <a href="./Productos.html" class="nav-primary">Comprar ahora →</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══ CHECKOUT HERO ══════════════════════ -->
+  <section class="checkout-hero">
+    <div class="checkout-hero-inner">
+      <div class="checkout-breadcrumb">
+        <a href="./cesta.html" class="checkout-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Volver a la cesta
+        </a>
+        <div class="checkout-secure">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          Pago 100% seguro y encriptado
+        </div>
+      </div>
+      <h1 class="checkout-hero-title">Finalizar <em>compra</em></h1>
+      <p class="checkout-hero-sub">Elige tu método de pago preferido para completar el pedido.</p>
+    </div>
+  </section>
+
+  <!-- ══ CHECKOUT LAYOUT ═════════════════════ -->
+  <div class="checkout-layout">
+
+    <!-- Columna de métodos de pago -->
+    <main class="payment-section">
+
+      <!-- Tarjeta de crédito -->
+      <div class="method-card active" onclick="selectPayment(this)">
+        <div class="method-header">
+          <div class="method-label">
+            <div class="method-icon-wrap method-icon-blue">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+            <div>
+              <span class="method-name">Tarjeta de crédito / débito</span>
+              <span class="method-desc">Visa, Mastercard, American Express</span>
+            </div>
+          </div>
+          <div class="custom-radio"></div>
+        </div>
+        <div class="method-body">
+          <div class="co-field">
+            <label>Número de tarjeta</label>
+            <div class="co-input-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" id="card-number">
+            </div>
+          </div>
+          <div class="co-field-row">
+            <div class="co-field">
+              <label>Vencimiento</label>
+              <input type="text" placeholder="MM/AA" maxlength="5" id="card-exp">
+            </div>
+            <div class="co-field">
+              <label>CVC</label>
+              <input type="password" placeholder="•••" maxlength="4" id="card-cvc">
+            </div>
+          </div>
+          <div class="co-field">
+            <label>Titular de la tarjeta</label>
+            <input type="text" placeholder="Nombre como aparece en la tarjeta" id="card-name">
+          </div>
+        </div>
+      </div>
+
+      <!-- PayPal -->
+      <div class="method-card" onclick="selectPayment(this)">
+        <div class="method-header">
+          <div class="method-label">
+            <div class="method-icon-wrap method-icon-paypal">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 3.72a.641.641 0 0 1 .632-.54h7.19c2.897 0 5.124.604 6.313 1.902 1.15 1.255 1.34 2.976.602 5.094-.954 2.735-3.13 4.28-6.046 4.28h-1.636a.641.641 0 0 0-.633.54l-.946 5.862a.641.641 0 0 1-.632.54l-2.712-.06z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="method-name">PayPal</span>
+              <span class="method-desc">Pago rápido con tu cuenta PayPal</span>
+            </div>
+          </div>
+          <div class="custom-radio"></div>
+        </div>
+        <div class="method-body">
+          <p class="method-helper">Serás redirigido a PayPal para completar la transacción de forma segura.</p>
+          <button class="paypal-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 3.72a.641.641 0 0 1 .632-.54h7.19c2.897 0 5.124.604 6.313 1.902 1.15 1.255 1.34 2.976.602 5.094-.954 2.735-3.13 4.28-6.046 4.28h-1.636a.641.641 0 0 0-.633.54l-.946 5.862a.641.641 0 0 1-.632.54l-2.712-.06z"/></svg>
+            Pagar con PayPal
+          </button>
+        </div>
+      </div>
+
+      <!-- Bizum -->
+      <div class="method-card" onclick="selectPayment(this)">
+        <div class="method-header">
+          <div class="method-label">
+            <div class="method-icon-wrap method-icon-bizum">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+            <div>
+              <span class="method-name">Bizum</span>
+              <span class="method-desc">Pago instantáneo desde tu móvil</span>
+            </div>
+          </div>
+          <div class="custom-radio"></div>
+        </div>
+        <div class="method-body">
+          <div class="co-field">
+            <label>Número de teléfono</label>
+            <div class="co-input-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              <input type="tel" placeholder="6XX XXX XXX" maxlength="9" id="bizum-phone">
+            </div>
+          </div>
+          <div class="bizum-info">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            Recibirás una notificación en tu app bancaria para confirmar el pago.
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Columna de resumen -->
+    <aside class="co-summary">
+      <div class="co-summary-box">
+        <h2 class="co-summary-title">Resumen del pedido</h2>
+
+        <div id="co-items-list" class="co-items-list">
+          <p style="color: var(--gray-400); font-size: 14px;">Cargando productos...</p>
+        </div>
+
+        <div class="co-summary-divider"></div>
+
+        <div class="co-summary-rows">
+          <div class="co-srow">
+            <span>Subtotal</span>
+            <span id="co-subtotal">0,00 €</span>
+          </div>
+          <div class="co-srow">
+            <span>Envío</span>
+            <span class="co-free">Gratis</span>
+          </div>
+          <div class="co-srow co-srow-iva">
+            <span>IVA incluido (21%)</span>
+            <span id="co-iva">0,00 €</span>
+          </div>
+        </div>
+
+        <div class="co-summary-total">
+          <span>Total</span>
+          <span id="co-total">0,00 €</span>
+        </div>
+
+        <a href="PagoConfirmado.html" style="text-decoration:none;">
+          <button class="co-pay-btn" id="co-pay-btn" onclick="handleCheckoutPay()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            Confirmar y pagar
+          </button>
+        </a>
+
+        <div class="co-trust">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Pago seguro con cifrado SSL de 256 bits
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ══ FOOTER ══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="Incio.html" class="nav-brand">
+            <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+              <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+              <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+                    font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+            </svg>
+            <span>NAVICOM</span>
+          </a>
+          <p>C/ Buenavista 53, Coín, Málaga.<br>Soluciones tecnológicas de confianza.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Carreras</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Productos</h4>
+            <a href="Productos.html">Hardware</a>
+            <a href="Productos.html">Software</a>
+            <a href="Productos.html">Servidores y NAS</a>
+          </div>
+          <div class="footer-col">
+            <h4>Soporte</h4>
+            <a href="Contacto.html">Contacto</a>
+            <a href="#">Soporte 24/7</a>
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Navicom-Informatica-1407475992894178/" target="_blank" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://instagram.com/navicom" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/navicom" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <p class="copyright">&copy; 2026 Navicom. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./js.js"></script>
+
+</body>
+</html>

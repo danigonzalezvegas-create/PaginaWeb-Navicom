@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — Navicom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── COOKIE BANNER ────────────────────────────────────────── -->
+  <div class="cookie-overlay" id="cookie-overlay">
+    <div class="cookie-banner">
+      <div class="cookie-banner-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+      </div>
+      <div class="cookie-banner-text">
+        <h3>Usamos cookies</h3>
+        <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia. Puedes aceptar todas o solo las esenciales. <a href="#">Política de cookies</a>.</p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="cookie-btn-accept" id="cookie-accept">Aceptar todas</button>
+        <button class="cookie-btn-reject" id="cookie-reject">Solo esenciales</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ NAVBAR ══════════════════════════════ -->
+   <header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="./Incio.html" class="nav-brand">
+      <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+        <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+        <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+              font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+      </svg>
+      <span>NAVICOM</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="./Inicio.html" class="nav-item active">Inicio</a>
+      <a href="./Productos.html" class="nav-item">Productos</a>
+      <a href="./Servicios.html" class="nav-item">Servicios</a>
+      <a href="./cesta.html" class="cart-wrapper" id="cart-trigger">
+        <div class="cart-icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-counter" id="cart-count">0</span>
+        </div>
+      </a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="./Contacto.html" class="nav-ghost">Contacto</a>
+      <a href="./iniciarSesion.html" class="nav-ghost nav-account">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        Iniciar sesión
+      </a>
+      <a href="./Productos.html" class="nav-primary">Comprar ahora →</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+  <main class="page-content">
+
+    <!-- ── HERO SERVICIOS ────────────────────────────────────────── -->
+    <section class="srv-hero">
+      <div class="srv-hero-bg"></div>
+      <div class="srv-hero-dots"></div>
+      <div class="srv-hero-content">
+        <div class="srv-hero-left">
+          <span class="srv-eyebrow-pill">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Servicios Profesionales
+          </span>
+          <h1 class="srv-hero-title">Soluciones IT <em>a medida</em><br>para tu empresa</h1>
+          <p class="srv-hero-sub">Ofrecemos un catálogo completo de servicios informáticos: desde el mantenimiento preventivo y correctivo de equipos hasta el diseño de redes, ciberseguridad y soporte técnico 24/7. Todo lo que tu negocio necesita en un único partner tecnológico.</p>
+          <div class="srv-hero-actions">
+            <a href="Contacto.html" class="btn-hero-primary">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+              Solicitar presupuesto
+            </a>
+            <a href="#servicios-grid" class="btn-hero-outline">Ver todos los servicios</a>
+          </div>
+        </div>
+        <div class="srv-hero-cards">
+          <div class="srv-hero-card" style="--delay:0.1s">
+            <div class="shc-icon shc-blue">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div>
+              <h4>Mantenimiento</h4>
+              <p>Preventivo y correctivo</p>
+            </div>
+          </div>
+          <div class="srv-hero-card" style="--delay:0.2s">
+            <div class="shc-icon shc-green">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h4>Ciberseguridad</h4>
+              <p>Protección avanzada</p>
+            </div>
+          </div>
+          <div class="srv-hero-card" style="--delay:0.3s">
+            <div class="shc-icon shc-orange">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <div>
+              <h4>Redes &amp; Servidores</h4>
+              <p>Infraestructura sólida</p>
+            </div>
+          </div>
+          <div class="srv-hero-card" style="--delay:0.4s">
+            <div class="shc-icon shc-purple">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div>
+              <h4>Soporte 24/7</h4>
+              <p>Siempre disponibles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GRID PRINCIPAL SERVICIOS ──────────────────────────────── -->
+    <section class="srv-main" id="servicios-grid">
+      <div class="srv-main-inner">
+        <div class="srv-main-head reveal-up">
+          <span class="section-eyebrow">Lo que hacemos</span>
+          <h2 class="section-heading">Todos nuestros <em>servicios</em></h2>
+          <p class="srv-main-sub">Soluciones integrales para empresas y particulares. Cubrimos todo el ciclo de vida de tu infraestructura tecnológica.</p>
+        </div>
+
+        <div class="srv-cards-grid">
+
+          <!-- Mantenimiento -->
+          <div class="srv-card reveal-up" style="--delay:0.05s">
+            <div class="srv-card-top">
+              <div class="srv-card-icon sci-blue">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <span class="srv-card-tag">Hardware</span>
+            </div>
+            <h3>Mantenimiento de Equipos</h3>
+            <p>Mantenimiento preventivo y correctivo de ordenadores, portátiles y servidores. Limpieza interna, actualización de componentes, diagnóstico completo y reparación de averías.</p>
+            <ul class="srv-card-list">
+              <li>Diagnóstico y reparación de hardware</li>
+              <li>Limpieza interna profesional</li>
+              <li>Cambio de pasta térmica y ventiladores</li>
+              <li>Sustitución de discos, RAM y baterías</li>
+            </ul>
+            <a href="Contacto.html" class="srv-card-link">Solicitar servicio →</a>
+          </div>
+
+          <!-- Redes -->
+          <div class="srv-card reveal-up" style="--delay:0.1s">
+            <div class="srv-card-top">
+              <div class="srv-card-icon sci-green">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </div>
+              <span class="srv-card-tag srv-tag-green">Redes</span>
+            </div>
+            <h3>Instalación de Redes</h3>
+            <p>Diseño, instalación y configuración de redes locales (LAN/WAN), WiFi empresarial, switches gestionados y cableado estructurado certificado para oficinas y naves industriales.</p>
+            <ul class="srv-card-list">
+              <li>Redes cableadas Cat6/Cat7 certificadas</li>
+              <li>WiFi corporativo con cobertura total</li>
+              <li>VPN y acceso remoto seguro</li>
+              <li>Segmentación VLAN y QoS</li>
+            </ul>
+            <a href="Contacto.html" class="srv-card-link">Solicitar servicio →</a>
+          </div>
+
+          <!-- Seguridad -->
+          <div class="srv-card reveal-up" style="--delay:0.15s">
+            <div class="srv-card-top">
+              <div class="srv-card-icon sci-red">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span class="srv-card-tag srv-tag-red">Seguridad</span>
+            </div>
+            <h3>Ciberseguridad</h3>
+            <p>Protección integral contra amenazas digitales: instalación y gestión de antivirus corporativo, firewalls, políticas de seguridad, auditorías y formación para empleados.</p>
+            <ul class="srv-card-list">
+              <li>Antivirus y EDR empresarial</li>
+              <li>Firewall y filtrado de contenidos</li>
+              <li>Auditorías de seguridad</li>
+              <li>Formación en concienciación</li>
+            </ul>
+            <a href="Contacto.html" class="srv-card-link">Solicitar servicio →</a>
+          </div>
+
+          <!-- Backup -->
+          <div class="srv-card reveal-up" style="--delay:0.2s">
+            <div class="srv-card-top">
+              <div class="srv-card-icon sci-orange">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+              </div>
+              <span class="srv-card-tag srv-tag-orange">Cloud</span>
+            </div>
+            <h3>Backup y Recuperación</h3>
+            <p>Soluciones de copia de seguridad automatizada local y en la nube. Recuperación ante desastres, continuidad del negocio y protección contra ransomware con planes 3-2-1.</p>
+            <ul class="srv-card-list">
+              <li>Backup automático local y cloud</li>
+              <li>Recuperación ante desastres (DR)</li>
+              <li>Protección contra ransomware</li>
+              <li>Restauración garantizada en 24h</li>
+            </ul>
+            <a href="Contacto.html" class="srv-card-link">Solicitar servicio →</a>
+          </div>
+
+          <!-- Soporte -->
+          <div class="srv-card reveal-up" style="--delay:0.25s">
+            <div class="srv-card-top">
+              <div class="srv-card-icon sci-purple">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              </div>
+              <span class="srv-card-tag srv-tag-purple">Soporte</span>
+            </div>
+            <h3>Soporte Técnico</h3>
+            <p>Asistencia técnica remota y presencial para resolver incidencias en el menor tiempo posible. Contratos de mantenimiento con SLA garantizado para empresas de cualquier tamaño.</p>
+            <ul class="srv-card-list">
+              <li>Soporte remoto inmediato</li>
+              <li>Visitas técnicas presenciales</li>
+              <li>Contratos con SLA garantizado</li>
+              <li>Helpdesk multicanal</li>
+            </ul>
+            <a href="Contacto.html" class="srv-card-link">Solicitar servicio →</a>
+          </div>
+
+          <!-- Consultoría -->
+          <div class="srv-card reveal-up" style="--delay:0.3s">
+            <div class="srv-card-top">
+              <div class="srv-card-icon sci-teal">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <span class="srv-card-tag srv-tag-teal">Consultoría</span>
+            </div>
+            <h3>Consultoría IT</h3>
+            <p>Asesoramiento tecnológico estratégico para modernizar tu empresa. Auditorías de infraestructura, hoja de ruta digital, selección de herramientas y acompañamiento en la transformación.</p>
+            <ul class="srv-card-list">
+              <li>Auditoría de infraestructura IT</li>
+              <li>Hoja de ruta de digitalización</li>
+              <li>Selección e implantación de software</li>
+              <li>Gestión de proyectos tecnológicos</li>
+            </ul>
+            <a href="Contacto.html" class="srv-card-link">Solicitar servicio →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROCESO DE TRABAJO ──────────────────────────────────── -->
+    <section class="srv-process">
+      <div class="srv-process-inner">
+        <div class="srv-process-head reveal-up">
+          <span class="section-eyebrow">Cómo trabajamos</span>
+          <h2 class="section-heading">Nuestro proceso en <em>4 pasos</em></h2>
+        </div>
+        <div class="srv-process-steps">
+          <div class="srv-pstep reveal-up" style="--delay:0.05s">
+            <div class="srv-pstep-n">1</div>
+            <h3>Análisis</h3>
+            <p>Estudiamos tu infraestructura actual, necesidades y objetivos para diseñar la solución más adecuada.</p>
+          </div>
+          <div class="srv-pstep-arrow"></div>
+
+          <div class="srv-pstep reveal-up" style="--delay:0.1s">
+            <div class="srv-pstep-n">2</div>
+            <h3>Propuesta</h3>
+            <p>Presentamos un presupuesto detallado, sin sorpresas, con plazos claros y opciones adaptadas a tu presupuesto.</p>
+          </div>
+          <div class="srv-pstep-arrow"></div>
+
+          <div class="srv-pstep reveal-up" style="--delay:0.15s">
+            <div class="srv-pstep-n">3</div>
+            <h3>Implementación</h3>
+            <p>Ejecutamos el proyecto con el mínimo impacto en tu actividad diaria. Coordinamos cada fase contigo.</p>
+          </div>
+          <div class="srv-pstep-arrow"></div>
+
+          <div class="srv-pstep reveal-up" style="--delay:0.2s">
+            <div class="srv-pstep-n">4</div>
+            <h3>Seguimiento</h3>
+            <p>Monitorizamos los resultados y ofrecemos soporte continuo para garantizar el óptimo funcionamiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PLANES / TARIFAS ───────────────────────────────────── -->
+    <section class="srv-plans">
+      <div class="srv-plans-inner">
+        <div class="srv-plans-head reveal-up">
+          <span class="section-eyebrow">Planes de servicio</span>
+          <h2 class="section-heading">Elige el plan <em>ideal</em> para ti</h2>
+          <p class="srv-plans-sub">Contratos de mantenimiento flexibles con soporte incluido. Sin permanencia obligatoria.</p>
+        </div>
+        <div class="srv-plans-grid">
+
+          <div class="srv-plan reveal-up" style="--delay:0.05s">
+            <div class="srv-plan-tag">Básico</div>
+            <div class="srv-plan-price">
+              <span class="srv-plan-amount">49</span>
+              <span class="srv-plan-currency">€/mes</span>
+            </div>
+            <p class="srv-plan-desc">Ideal para autónomos y microempresas que necesitan soporte puntual.</p>
+            <ul class="srv-plan-list">
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Soporte remoto (horario laboral)</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 2 visitas técnicas al mes</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Mantenimiento preventivo básico</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Hasta 5 equipos</li>
+            </ul>
+            <a href="Contacto.html" class="srv-plan-btn srv-plan-btn-outline">Contratar</a>
+          </div>
+
+          <div class="srv-plan srv-plan-featured reveal-up" style="--delay:0.1s">
+            <div class="srv-plan-badge">Más popular</div>
+            <div class="srv-plan-tag srv-plan-tag-light">Empresa</div>
+            <div class="srv-plan-price">
+              <span class="srv-plan-amount">149</span>
+              <span class="srv-plan-currency">€/mes</span>
+            </div>
+            <p class="srv-plan-desc">La solución completa para PYMEs que necesitan IT gestionado de forma profesional.</p>
+            <ul class="srv-plan-list">
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Soporte 24/5 remoto + presencial</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Visitas ilimitadas</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Backup cloud incluido</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Ciberseguridad gestionada</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Hasta 25 equipos</li>
+            </ul>
+            <a href="Contacto.html" class="srv-plan-btn">Contratar</a>
+          </div>
+
+          <div class="srv-plan reveal-up" style="--delay:0.15s">
+            <div class="srv-plan-tag">Enterprise</div>
+            <div class="srv-plan-price">
+              <span class="srv-plan-amount">A medida</span>
+            </div>
+            <p class="srv-plan-desc">Para grandes empresas o proyectos con requisitos especiales y SLA personalizado.</p>
+            <ul class="srv-plan-list">
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Soporte 24/7 con SLA garantizado</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Técnico dedicado</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Consultoría IT estratégica</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Equipos ilimitados</li>
+            </ul>
+            <a href="Contacto.html" class="srv-plan-btn srv-plan-btn-outline">Contactar</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+   <!-- ══ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="Inicio.html" class="nav-brand">
+            <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+              <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+              <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+                    font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+            </svg>
+            <span>NAVICOM</span>
+          </a>
+          <p>C/ Buenavista 53, Coín, Málaga.<br>Soluciones tecnológicas de confianza.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Carreras</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Productos</h4>
+            <a href="Productos.html">Hardware</a>
+            <a href="Productos.html">Software</a>
+            <a href="Productos.html">Servidores y NAS</a>
+          </div>
+          <div class="footer-col">
+            <h4>Soporte</h4>
+            <a href="Contacto.html">Contacto</a>
+            <a href="#">Soporte 24/7</a>
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Navicom-Informatica-1407475992894178/" target="_blank" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://instagram.com/navicom" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/navicom" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <p class="copyright">&copy; 2026 Navicom. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./js.js"></script>
+</body>
+</html>

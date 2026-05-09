@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos — Navicom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="page-productos">
+
+  <!-- ══ NAVBAR ══════════════════════════════ -->
+  <header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="./Incio.html" class="nav-brand">
+      <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+        <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+        <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+              font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+      </svg>
+      <span>NAVICOM</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="./Incio.html" class="nav-item">Inicio</a>
+      <a href="./Productos.html" class="nav-item active">Productos</a>
+      <a href="./Servicios.html" class="nav-item">Servicios</a>
+      <a href="./cesta.html" class="cart-wrapper" id="cart-trigger">
+        <div class="cart-icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-counter" id="cart-count">0</span>
+        </div>
+      </a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="./Contacto.html" class="nav-ghost">Contacto</a>
+      <a href="./iniciarSesion.html" class="nav-ghost nav-account">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        Iniciar sesión
+      </a>
+      <a href="./cesta.html" class="nav-primary">Ver cesta →</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+  <!-- ══ PAGE HERO — REDISEÑADO ═══════════════ -->
+  <section class="prod-hero">
+    <div class="prod-hero-content">
+      <div class="prod-hero-left">
+        <div class="prod-eyebrow-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Catálogo completo
+        </div>
+        <h1 class="prod-hero-title">Hardware, software<br>y <em>periféricos</em></h1>
+        <p class="prod-hero-sub">Seleccionados para equipos que exigen lo mejor. Tecnología de confianza para cada necesidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FILTER BAR ═══════════════════════════ -->
+  <div class="filter-bar">
+    <div class="filter-bar-inner">
+      <div class="filter-tabs" id="filter-tabs">
+        <button class="filter-tab active" data-filter="todos">Todos <span class="tab-count">9</span></button>
+        <button class="filter-tab" data-filter="hardware">Hardware <span class="tab-count">3</span></button>
+        <button class="filter-tab" data-filter="software">Software <span class="tab-count">2</span></button>
+        <button class="filter-tab" data-filter="perifericos">Periféricos <span class="tab-count">3</span></button>
+        <button class="filter-tab" data-filter="servidores">Servidores y NAS <span class="tab-count">1</span></button>
+      </div>
+      <div class="prod-search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="search-input" placeholder="Buscar productos…">
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PRODUCTS MAIN ════════════════════════ -->
+  <main class="prod-main">
+    <div class="prod-main-inner">
+
+      <!-- HARDWARE -->
+      <div class="cat-section" data-cat="hardware" id="cat-hardware">
+        <div class="cat-head">
+          <div class="cat-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div>
+            <h2>Hardware</h2>
+            <p>Equipos de trabajo y cómputo de alto rendimiento</p>
+          </div>
+        </div>
+        <div class="prod-grid" id="grid-hardware"></div>
+      </div>
+
+      <!-- SOFTWARE -->
+      <div class="cat-section" data-cat="software" id="cat-software">
+        <div class="cat-head">
+          <div class="cat-icon cat-icon-sw">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div>
+            <h2>Software</h2>
+            <p>Licencias y soluciones de seguridad empresarial</p>
+          </div>
+        </div>
+        <div class="prod-grid" id="grid-software"></div>
+      </div>
+
+      <!-- PERIFÉRICOS -->
+      <div class="cat-section" data-cat="perifericos" id="cat-perifericos">
+        <div class="cat-head">
+          <div class="cat-icon cat-icon-per">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div>
+            <h2>Periféricos</h2>
+            <p>Teclados, ratones, monitores y accesorios</p>
+          </div>
+        </div>
+        <div class="prod-grid" id="grid-perifericos"></div>
+      </div>
+
+      <!-- SERVIDORES -->
+      <div class="cat-section" data-cat="servidores" id="cat-servidores">
+        <div class="cat-head">
+          <div class="cat-icon cat-icon-ser">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <div>
+            <h2>Servidores y NAS</h2>
+            <p>Infraestructura para almacenamiento y cómputo empresarial</p>
+          </div>
+        </div>
+        <div class="prod-grid" id="grid-servidores"></div>
+      </div>
+
+      <div class="empty-state" id="empty-state">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <p>No se encontraron productos.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ══ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="Inicio.html" class="nav-brand">
+            <svg width="34" height="34" viewBox="0 0 80 80" fill="none">
+              <rect x="8" y="30" width="30" height="30" rx="4" transform="rotate(-45 8 30)" fill="#2563EB" opacity="0.95"/>
+              <text x="40" y="47" text-anchor="middle" dominant-baseline="middle"
+                    font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#fff">N</text>
+            </svg>
+            <span>NAVICOM</span>
+          </a>
+          <p>Soluciones tecnológicas de confianza para tu empresa.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Carreras</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Productos</h4>
+            <a href="Productos.html">Hardware</a>
+            <a href="Productos.html">Software</a>
+            <a href="Productos.html">Servidores y NAS</a>
+          </div>
+          <div class="footer-col">
+            <h4>Soporte</h4>
+            <a href="Contacto.html">Contacto</a>
+            <a href="#">Soporte 24/7</a>
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="https://instagram.com/navicom" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://facebook.com/navicom" target="_blank" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/navicom" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://x.com/navicom" target="_blank" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><path d="M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>
+          </a>
+        </div>
+        <p class="copyright">&copy; 2026 Navicom. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <div class="toast-dot"></div>
+    <span id="toast-msg">Añadido a la cesta</span>
+  </div>
+
+  <script type="module" src="./js.js"></script>
+  
+</body>
+</html>
